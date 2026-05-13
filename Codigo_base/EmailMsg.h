@@ -5,19 +5,21 @@
 #ifndef PROJETO_EMAILMSG_H
 #define PROJETO_EMAILMSG_H
 
-
+void incrementar (int &x) {
+    x++;
+}
 
 class EmailMsg {
 
 private:
-    unsigned int id;
+    unsigned int id = 1;
     string srcAddr;
     string dstAddr;
 public:
     //construtor defeito
     EmailMsg(): id(0), srcAddr(""), dstAddr("") {}
     //construtor definido
-    EmailMsg(unsigned int iden, string sa, string da): id(iden), srcAddr(sa), dstAddr(da) {}
+    EmailMsg(string sa, string da): id(nextId++), srcAddr(sa), dstAddr(da) {}
     //getters
     unsigned int getId() {return id;}
     string getSrcAddr() {return srcAddr;}
@@ -29,7 +31,7 @@ public:
         cout << "Origem: " << srcAddr << "\n";
         cout << "Destino: " << dstAddr << "\n";
     }
-
+unsigned int EmailMsg::nextId = 1;
 
 
 };
