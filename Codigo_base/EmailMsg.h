@@ -2,6 +2,10 @@
 // Created by Gustavo on 07/05/2026.
 //
 
+#include <iostream>
+#include <string>
+#include <iomanip>
+
 #ifndef PROJETO_EMAILMSG_H
 #define PROJETO_EMAILMSG_H
 
@@ -15,25 +19,23 @@ private:
     unsigned int id = 1;
     string srcAddr;
     string dstAddr;
+
 public:
     //construtor defeito
-    EmailMsg(): id(0), srcAddr(""), dstAddr("") {}
+    EmailMsg();
+
     //construtor definido
-    EmailMsg(string sa, string da): id(nextId++), srcAddr(sa), dstAddr(da) {}
+    EmailMsg(string sa, string da);
+
     //getters
-    unsigned int getId() {return id;}
-    string getSrcAddr() {return srcAddr;}
-    string getDstAddr() {return dstAddr;}
+    unsigned int getId() const;
+    string getSrcAddr() const;
+    string getDstAddr() const;
+
     //impressão
-    virtual void print() const {
-        cout << "\n"
-        cout << "Id: " << id << "\n";
-        cout << "Origem: " << srcAddr << "\n";
-        cout << "Destino: " << dstAddr << "\n";
+    virtual void print() const;
+       
     }
-unsigned int EmailMsg::nextId = 1;
-
-
 };
 
 
