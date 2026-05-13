@@ -19,23 +19,19 @@ private:
 
 public:
     //construtor defeito
-    User(): nome(""), email(""), numTele("") {}
+    User();
+
     //construtor definido
-    User(string n, string e, string nt): nome(n), email(e), numTele(nt) {}
+    User(string n, string e, string nt);
+
     //getters
-    string getNome() {return nome;}
-    string getEmail() {return email;}
-    string getNumTele() {return numTele;}
+    string getNome() const;
+    string getEmail() const;
+    string getNumTele() const;
+
     //impressão
-    virtual void print() const {
-        cout << "\n";
-        cout << "Nome: " << nome << "\n";
-        cout << "Email: " << email << "\n";
-        cout << "Número de Telemóvel: " << numTele << "\n";
-    }      
+    virtual void print() const;     
 
-};
-
-
+}
 
 #endif //PROJETO_USER_H
