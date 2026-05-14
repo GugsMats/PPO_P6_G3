@@ -17,7 +17,7 @@ EmailMsg::EmailMsg(string sa, string da): id(nextId++), srcAddr(sa), dstAddr(da)
 unsigned int EmailMsg::getId() const {return id;} 
 string EmailMsg::getSrcAddr() const {return srcAddr;}
 string EmailMsg::getDstAddr() const {return dstAddr;}
-string EmailMsg:: getType() const {return "Mensagem via Email";}
+string EmailMsg::getType() const {return "Mensagem via Email";}
 
 //impressão
 virtual void print() const {
