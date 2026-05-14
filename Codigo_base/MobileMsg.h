@@ -10,14 +10,9 @@
 
 using namespace std;
 
-void incrementar (int &x) {
-    x++;
-}
-
 class MobileMsg: public Msg {
 
     private:
-        unsigned int id = 1000;
         string srcPhoneNo;
         string dstPhoneNo;
 
