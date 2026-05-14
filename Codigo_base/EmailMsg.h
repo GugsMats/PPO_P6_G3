@@ -28,7 +28,7 @@ public:
     string getDstAddr() const;
 
     //impressão
-    virtual void print() const;
+    void print() const;
        
     }
 };
