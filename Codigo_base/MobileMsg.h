@@ -22,6 +22,7 @@ class MobileMsg: public Msg {
 
         //definido
         MobileMsg(string spn, string dpn);
+            virtual ~MobileMsg() {}
 
         //getters
         unsigned int getId() const;
