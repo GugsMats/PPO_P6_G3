@@ -12,13 +12,21 @@ using namespace std;
 class Msg {
     protected:
         unsigned int id;
-        std::string info;
+        string info;
 
     public:
+        //defeito
+        Msg();
+
+        //definido
         Msg(std::string i);
          virtual ~Msg(){}
-        
-    	virtual std::string getype() const=0 ;
+
+        //getters
+        string getInfo() const;
+
+        //impressão
+    	virtual void print() const;
 
 
 };
