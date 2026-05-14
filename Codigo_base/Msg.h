@@ -18,7 +18,7 @@ class Msg {
         Msg(std::string i);
          virtual ~Msg(){}
         
-    	virtual std::string Getype() const=0 ;
+    	virtual std::string getype() const=0 ;
 
 
 };
