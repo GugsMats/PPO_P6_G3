@@ -28,6 +28,7 @@ class MobileMsg: public Msg {
         unsigned int getId() const;
         string getSrcPhoneNo() const;
         string getDstPhoneNo() const;
+        string getType() const;
 
         //impressão
         void print() const;
