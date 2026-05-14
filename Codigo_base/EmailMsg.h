@@ -28,6 +28,7 @@ public:
     unsigned int getId() const;
     string getSrcAddr() const;
     string getDstAddr() const;
+    string getType() const ;
 
     //impressão
     void print() const;
