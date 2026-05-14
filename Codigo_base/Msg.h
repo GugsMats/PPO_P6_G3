@@ -24,6 +24,7 @@ class Msg {
 
         //getters
         string getInfo() const;
+        virtual string getType() const=0; 
 
         //impressão
     	virtual void print() const;
