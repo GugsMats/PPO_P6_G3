@@ -17,6 +17,7 @@ MobileMsg:: MobileMsg(string spn, string dpn): id(nextId++), srcPhoneNo(spn), ds
 unsigned int MobileMsg:: getId() const {return id;}
 string MobileMsg:: getSrcPhoneNo() const {return srcPhoneNo;}
 string MobileMsg:: getDstPhoneNo() const {return dstPhoneNo;}
+string MobileMsg:: getType() const {return "Mensagem via contacto telefónico"}
 
 //impressão
 virtual void print() const {
