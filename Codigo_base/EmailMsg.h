@@ -21,6 +21,8 @@ public:
 
     //construtor definido
     EmailMsg(string sa, string da);
+        virtual ~EmailMsg() {}
+
 
     //getters
     unsigned int getId() const;
