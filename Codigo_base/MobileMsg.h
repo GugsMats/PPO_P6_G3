@@ -14,7 +14,7 @@ void incrementar (int &x) {
     x++;
 }
 
-class MobileMsg {
+class MobileMsg: public Msg {
 
     private:
         unsigned int id = 1000;
