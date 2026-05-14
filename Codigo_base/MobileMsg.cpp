@@ -24,4 +24,5 @@ virtual void print() const {
         cout << "Id: " << id << "\n";
         cout << "Origem: " << srcPhoneNo << "\n";
         cout << "Destino: " << dstPhoneNo << "\n";
+    cout << Msg.print();
 }
