@@ -29,7 +29,7 @@ class MobileMsg: public Msg {
         string getDstPhoneNo() const;
 
         //impressão
-        virtual void print() const;
+        void print() const;
 };
 
 
