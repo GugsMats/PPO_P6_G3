@@ -10,16 +10,18 @@ using namespace std;
 
 
 class Msg {
+    protected:
+        unsigned int id;
+        std::string info;
 
-private:
-    string info;
+    public:
+        Msg(std::string inf);
+         virtual ~Msg(){}
+        
+    	virtual std::string Getype() const=0 ;
 
-public:
-
-    virtual string getType();
 
 };
-
 
 
 #endif //PROJETO_MSG_H
