@@ -9,14 +9,9 @@
 #ifndef PROJETO_EMAILMSG_H
 #define PROJETO_EMAILMSG_H
 
-void incrementar (int &x) {
-    x++;
-}
-
 class EmailMsg: public Msg {
 
 private:
-    unsigned int id = 1;
     string srcAddr;
     string dstAddr;
 
