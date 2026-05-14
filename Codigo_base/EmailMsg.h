@@ -13,7 +13,7 @@ void incrementar (int &x) {
     x++;
 }
 
-class EmailMsg {
+class EmailMsg: public Msg {
 
 private:
     unsigned int id = 1;
