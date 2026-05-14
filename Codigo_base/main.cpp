@@ -27,9 +27,20 @@ int main() {
     // Descomente o #include "User.h" no topo e o bloco abaixo
     // quando tiver a classe User implementada.
     // =========================================================
-#if 0
+#if 1
     User u1("António", "aa@site.pt",  "+351 999888777");
     User u2("Maria",   "mm@mail.com", "+1 234432234");
+
+    u1.saveToFile("outUsers.txt");
+    u2.saveToFile("outUsers.txt");
+
+    User u3;
+    u3.loadFromFile("inUsers.txt");
+    u3.print();
+
+    User u4;
+    u4.loadFromFile("inUsers.txt");
+    u4.print();
 
     cout << u1 << "\n";
     cout << u2 << "\n";
@@ -44,7 +55,7 @@ int main() {
     // Descomente o #include "Msg.h" no topo e active este bloco
     // quando tiver as duas classes a compilar.
     // =========================================================
-#if 0
+#if 1
     EmailMsg m1("aa@ua.pt", "bb@ua.pt", "Mensagem de teste 1");
     EmailMsg m2("cc@ua.pt", "bb@ua.pt", "Mensagem de teste 2");
     EmailMsg m3("ax@ua.pt", "dd@ua.pt", "Mensagem de teste 3");
@@ -71,7 +82,7 @@ int main() {
     // guardados no heap e o ponteiro mantém-se válido dentro do
     // vector. No final, liberta a memória com 'delete'.
     // =========================================================
-#if 0
+#if 1
     vector<Msg*> mensagens;
     mensagens.push_back(new EmailMsg("aa@ua.pt",   "bb@ua.pt",   "Email na lista"));
     mensagens.push_back(new MobileMsg("912345678", "987654321",  "SMS na lista"));
@@ -98,7 +109,7 @@ int main() {
     // (Parte B — introdução pelo teclado)
     // Active quando iniciar a Parte B.
     // =========================================================
-#if 0
+#if 1
     vector<User>  utilizadores;
     vector<Msg*>  pendentes;    // mensagens ainda não enviadas
     vector<Msg*>  enviadas;     // mensagens já enviadas (Parte C)
@@ -166,7 +177,7 @@ int main() {
     // EmailMsg de MobileMsg, ...) é uma decisão de projecto sua.
     // Defina o formato, documente-o e crie ficheiros de teste.
     // =========================================================
-#if 0
+#if 1
     // Exemplo de esqueleto para leitura de utilizadores:
     //
     // ifstream f("users.csv");
@@ -199,7 +210,7 @@ int main() {
     //   3. Corra o servidor numa janela separada:
     //        ./servidor   (compilado de 'Codigo Sockets II')
     // =========================================================
-#if 0
+#if 1
     NetworkSocket cliente(0);   // porta 0 = SO escolhe uma porta livre
     if (!cliente.isValid()) {
         cerr << "Erro ao criar socket.\n";

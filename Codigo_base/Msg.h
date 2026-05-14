@@ -7,7 +7,7 @@
 
 using namespace std;
 #include <string>
-
+#include <iostream>
 
 class Msg {
     protected:
@@ -28,6 +28,7 @@ class Msg {
 
         //impressão
     	virtual void print() const;
+        string printInf() const;
 
 
 };

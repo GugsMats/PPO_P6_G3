@@ -20,7 +20,7 @@ string MobileMsg:: getDstPhoneNo() const {return dstPhoneNo;}
 string MobileMsg:: getType() const {return "Mensagem via contacto telefónico";}
 
 //impressão
-virtual void print() const {
+void MobileMsg::print() const {
     cout << "\n";
         cout << "Id: " << id << "\n";
         cout << "Origem: " << srcPhoneNo << "\n";

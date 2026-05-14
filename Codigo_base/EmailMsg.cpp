@@ -20,12 +20,10 @@ string EmailMsg::getDstAddr() const {return dstAddr;}
 string EmailMsg::getType() const {return "Mensagem via Email";}
 
 //impressão
-virtual void print() const {
-   cout << "\n"
+void EmailMsg::print() const {
+   cout << "\n";
         cout << "Id: " << id << "\n";
         cout << "Origem: " << srcAddr << "\n";
         cout << "Destino: " << dstAddr << "\n";
    cout << Msg::print();
 }
-
-#endif //PROJETO_EMAILMSG_H

@@ -6,9 +6,9 @@
 #define PROJETO_USER_H
 
 using namespace std;
-#include "string"
-
-
+#include <string>
+#include <iostream>
+#include <fstream>
 
 class User {
 
@@ -30,8 +30,12 @@ public:
     string getNumTele() const;
 
     //impressão
-    virtual void print() const;     
+   void print() const;
 
-}
+    //ficheiros
+    void saveToFile(string nfic) const;
+    void loadToFile(string nfic);
+
+};
 
 #endif //PROJETO_USER_H

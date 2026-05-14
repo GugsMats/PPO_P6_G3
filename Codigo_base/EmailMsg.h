@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "Msg.h"
 
 #ifndef PROJETO_EMAILMSG_H
 #define PROJETO_EMAILMSG_H
@@ -33,8 +34,7 @@ public:
     //impressão
     void print() const;
        
-    }
-};
+    };
 
 
 

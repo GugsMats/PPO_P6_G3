@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "Msg.h"
 
 #ifndef PPO_P6_G3_MOBILEMSG_H
 #define PPO_P6_G3_MOBILEMSG_H
