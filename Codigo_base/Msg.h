@@ -19,7 +19,7 @@ class Msg {
         Msg();
 
         //definido
-        Msg(std::string i);
+        Msg(string i);
          virtual ~Msg(){}
 
         //getters
