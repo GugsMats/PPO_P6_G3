@@ -24,7 +24,7 @@ virtual void print() const {
         cout << "Id: " << id << "\n";
         cout << "Origem: " << srcAddr << "\n";
         cout << "Destino: " << dstAddr << "\n";
-   cout << Msg.print();
+   cout << Msg::print();
 }
 
 #endif //PROJETO_EMAILMSG_H
