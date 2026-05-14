@@ -32,6 +32,9 @@ class MobileMsg: public Msg {
 
         //impressão
         void print() const;
+
+    //teste porra
+
 };
 
 
