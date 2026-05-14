@@ -15,7 +15,7 @@ class Msg {
         std::string info;
 
     public:
-        Msg(std::string inf);
+        Msg(std::string i);
          virtual ~Msg(){}
         
     	virtual std::string Getype() const=0 ;
