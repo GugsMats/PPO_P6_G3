@@ -5,7 +5,6 @@
 #ifndef PROJETO_USER_H
 #define PROJETO_USER_H
 
-using namespace std;
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -13,21 +12,21 @@ using namespace std;
 class User {
 
 private:
-    string nome;
-    string email;
-    string numTele;
+    std::string nome;
+    std::string email;
+    std::string numTele;
 
 public:
     //construtor defeito
     User();
 
     //construtor definido
-    User(string n, string e, string nt);
+    User(std::string n, std::string e, std::string nt);
 
     //getters
-    string getNome() const;
-    string getEmail() const;
-    string getNumTele() const;
+    std::string getNome() const;
+    std::string getEmail() const;
+    std::string getNumTele() const;
 
     //impressão
    void print() const;

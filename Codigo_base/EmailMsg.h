@@ -13,23 +13,25 @@
 class EmailMsg: public Msg {
 
 private:
-    string srcAddr;
-    string dstAddr;
+    static unsigned int nextId;
+    unsigned int id;
+    std::string srcAddr;
+    std::string dstAddr;
 
 public:
     //construtor defeito
     EmailMsg();
 
     //construtor definido
-    EmailMsg(string sa, string da);
+    EmailMsg(std::string sa, std::string da, std::string txt);
         virtual ~EmailMsg() {}
 
 
     //getters
-    unsigned int getId() const;
-    string getSrcAddr() const;
-    string getDstAddr() const;
-    string getType() const ;
+    unsigned int getId() const override;
+    std::string getSrcAddr() const;
+    std::string getDstAddr() const;
+    std::string getType() const override;
 
     //impressão
     void print() const;

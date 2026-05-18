@@ -5,16 +5,16 @@
 #include "Msg.h"
 
 //defeito
-Msg:: Msg(): id(0), info("") {}
+Msg:: Msg(): info("") {}
 
 //definido
-Msg:: Msg(string i): id(nextId++), info(i) {}
+Msg:: Msg(std::string i): info(i) {}
 
 //getters
-string Msg:: getInfo() const {return info;}
+std::string Msg:: getInfo() const {return info;}
 
 //impressão
-void Msg::printInf() const {
-  cout << "\n";
-  cout << "Informação: " << info << "\n";
+void Msg::print() const {
+  std::cout << "\n";
+  std::cout << "Informação: " << info << "\n";
 }

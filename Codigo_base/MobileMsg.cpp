@@ -11,19 +11,19 @@ unsigned int MobileMsg::nextId = 1000;
 MobileMsg:: MobileMsg(): Msg(""), srcPhoneNo(""), dstPhoneNo("") {}
 
 //definido
-MobileMsg:: MobileMsg(string spn, string dpn, string i): Msg(i), srcPhoneNo(spn), dstPhoneNo(dpn) {}
+MobileMsg:: MobileMsg(std::string txt, std::string spn, std::string dpn): Msg(txt), id(nextId++), srcPhoneNo(spn), dstPhoneNo(dpn) {}
 
 //getters
 unsigned int MobileMsg:: getId() const {return id;}
-string MobileMsg:: getSrcPhoneNo() const {return srcPhoneNo;}
-string MobileMsg:: getDstPhoneNo() const {return dstPhoneNo;}
-string MobileMsg:: getType() const {return "Mensagem via contacto telefónico";}
+std::string MobileMsg:: getSrcPhoneNo() const {return srcPhoneNo;}
+std::string MobileMsg:: getDstPhoneNo() const {return dstPhoneNo;}
+std::string MobileMsg:: getType() const {return "Mensagem via contacto telefónico";}
 
 //impressão
 void MobileMsg::print() const {
-    cout << "\n";
-        cout << "Id: " << id << "\n";
-        cout << "Origem: " << srcPhoneNo << "\n";
-        cout << "Destino: " << dstPhoneNo << "\n";
+    std::cout << "\n";
+        std::cout << "Id: " << id << "\n";
+        std::cout << "Origem: " << srcPhoneNo << "\n";
+        std::cout << "Destino: " << dstPhoneNo << "\n";
     Msg::print();
 }

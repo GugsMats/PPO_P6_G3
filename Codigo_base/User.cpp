@@ -8,29 +8,29 @@
 User::User(): nome(""), email(""), numTele("") {}
 
 //definido
-User:: User(string n, string e, string nt): nome(n), email(e), numTele(nt) {}
+User:: User(std::string n, std::string e, std::string nt): nome(n), email(e), numTele(nt) {}
 
 //getters
-string User:: getNome() const {return nome;}
-string User:: getEmail() const {return email;}
-string User:: getNumTele() const {return numTele;}
+std::string User:: getNome() const {return nome;}
+std::string User:: getEmail() const {return email;}
+std::string User:: getNumTele() const {return numTele;}
 
 //impressão
 void User::print() const {
-  cout << "\n";
-  cout << "Nome: " << nome << "\n";
-  cout << "Email: " << email << "\n";
-  cout << "Número: " << numTele << "\n";
+  std::cout << "\n";
+  std::cout << "Nome: " << nome << "\n";
+  std::cout << "Email: " << email << "\n";
+  std::cout << "Número: " << numTele << "\n";
 };
 
 
 
 //ficheiro (escrita)
-  void User::saveToFile(string nfic) const {
-    ofstream ficheiro(nfic);
+  void User::saveToFile(std::string nfic) const {
+    std::ofstream ficheiro(nfic);
 
     if (!ficheiro.is_open()) {
-      cout << "Não foi possível abrir um ficheiro \n";
+      std::cout << "Não foi possível abrir um ficheiro \n";
       return;
     }
     ficheiro << nome << "\n";
@@ -42,12 +42,12 @@ void User::print() const {
 
 
 //ficheiro (leitura)
-void User::loadFromFile(string nfic) {
+void User::loadFromFile(std::string nfic) {
 
-    ifstream ficheiro(nfic);
+    std::ifstream ficheiro(nfic);
 
     if (!ficheiro.is_open()) {
-      cout << "Não foi possível abrir o ficheiro\n";
+      std::cout << "Não foi possível abrir o ficheiro\n";
       return;
     }
 

@@ -11,19 +11,19 @@ unsigned int EmailMsg::nextId = 1;
 EmailMsg::EmailMsg(): id(0), srcAddr(""), dstAddr("") {}
 
 //definido
-EmailMsg::EmailMsg(string sa, string da): id(nextId++), srcAddr(sa), dstAddr(da) {}
+EmailMsg::EmailMsg(std::string txt, std::string sa, std::string da): Msg(txt), id(nextId++), srcAddr(sa), dstAddr(da) {}
 
 //getters
 unsigned int EmailMsg::getId() const {return id;} 
-string EmailMsg::getSrcAddr() const {return srcAddr;}
-string EmailMsg::getDstAddr() const {return dstAddr;}
-string EmailMsg::getType() const {return "Mensagem via Email";}
+std::string EmailMsg::getSrcAddr() const {return srcAddr;}
+std::string EmailMsg::getDstAddr() const {return dstAddr;}
+std::string EmailMsg::getType() const {return "Mensagem via Email";}
 
 //impressão
 void EmailMsg::print() const {
-   cout << "\n";
-        cout << "Id: " << id << "\n";
-        cout << "Origem: " << srcAddr << "\n";
-        cout << "Destino: " << dstAddr << "\n";
-   cout << Msg::print();
+   std::cout << "\n";
+        std::cout << "Id: " << id << "\n";
+        std::cout << "Origem: " << srcAddr << "\n";
+        std::cout << "Destino: " << dstAddr << "\n";
+   Msg::print();
 }

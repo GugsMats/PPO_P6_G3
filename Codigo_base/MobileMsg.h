@@ -6,28 +6,27 @@
 #ifndef PPO_P6_G3_MOBILEMSG_H
 #define PPO_P6_G3_MOBILEMSG_H
 
-using namespace std;
-
 class MobileMsg: public Msg {
 
     private:
         static unsigned int nextId;
-        string srcPhoneNo;
-        string dstPhoneNo;
+        unsigned int id;
+        std::string srcPhoneNo;
+        std::string dstPhoneNo;
 
     public:
         //defeito
         MobileMsg();
 
         //definido
-        MobileMsg(string spn, string dpn, string i);
+        MobileMsg(std::string spn, std::string dpn, std::string txt);
             virtual ~MobileMsg() {}
 
         //getters
-        unsigned int getId() const;
-        string getSrcPhoneNo() const;
-        string getDstPhoneNo() const;
-        string getType() const;
+        unsigned int getId() const override;
+        std::string getSrcPhoneNo() const;
+        std::string getDstPhoneNo() const;
+        std::string getType() const override;
 
         //impressão
         void print() const;

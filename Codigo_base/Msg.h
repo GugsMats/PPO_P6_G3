@@ -5,31 +5,28 @@
 #ifndef PROJETO_MSG_H
 #define PROJETO_MSG_H
 
-using namespace std;
 #include <string>
 #include <iostream>
 
 class Msg {
     protected:
-        static unsigned int nextId;
-        unsigned int id;
-        string info;
+        std::string info;
 
     public:
         //defeito
         Msg();
 
         //definido
-        Msg(string i);
-         virtual ~Msg(){}
+        Msg(std::string i);
+         virtual ~Msg() {}
 
         //getters
-        string getInfo() const;
-        virtual string getType() const=0; 
+        std::string getInfo() const;
+        virtual std::string getType() const=0;
+        virtual unsigned int getId() const = 0;
 
         //impressão
-    	virtual void print() const = 0;
-        virtual void printInf() const = 0;
+    	virtual void print(std::ostream& os) const = 0;
 
 
 };
