@@ -18,4 +18,6 @@ add_executable(Projeto main.cpp
         Msg.cpp
         Msg.h
         EmailMsg.cpp
-        EmailMsg.h)
+        EmailMsg.h
+        MobileMsg.cpp
+        MobileMsg.h)

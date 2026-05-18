@@ -11,6 +11,7 @@ using namespace std;
 
 class Msg {
     protected:
+        static unsigned int nextId;
         unsigned int id;
         string info;
 
@@ -27,8 +28,8 @@ class Msg {
         virtual string getType() const=0; 
 
         //impressão
-    	virtual void print() const;
-        string printInf() const;
+    	virtual void print() const = 0;
+        virtual void printInf() const = 0;
 
 
 };

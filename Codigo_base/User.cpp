@@ -42,7 +42,7 @@ void User::print() const {
 
 
 //ficheiro (leitura)
-void User::loadToFile(string nfic) {
+void User::loadFromFile(string nfic) {
 
     ifstream ficheiro(nfic);
 

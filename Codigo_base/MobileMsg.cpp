@@ -8,10 +8,10 @@
 unsigned int MobileMsg::nextId = 1000;
 
 //defeito
-MobileMsg:: MobileMsg(): id(0), srcPhoneNo(""), dstPhoneNo("") {}
+MobileMsg:: MobileMsg(): Msg(""), srcPhoneNo(""), dstPhoneNo("") {}
 
 //definido
-MobileMsg:: MobileMsg(string spn, string dpn): id(nextId++), srcPhoneNo(spn), dstPhoneNo(dpn) {}
+MobileMsg:: MobileMsg(string spn, string dpn, string i): Msg(i), srcPhoneNo(spn), dstPhoneNo(dpn) {}
 
 //getters
 unsigned int MobileMsg:: getId() const {return id;}
@@ -25,5 +25,5 @@ void MobileMsg::print() const {
         cout << "Id: " << id << "\n";
         cout << "Origem: " << srcPhoneNo << "\n";
         cout << "Destino: " << dstPhoneNo << "\n";
-    cout << Msg::print();
+    Msg::print();
 }

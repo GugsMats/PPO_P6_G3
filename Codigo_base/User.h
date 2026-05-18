@@ -34,7 +34,7 @@ public:
 
     //ficheiros
     void saveToFile(string nfic) const;
-    void loadToFile(string nfic);
+    void loadFromFile(string nfic);
 
 };
 

@@ -14,8 +14,8 @@
 #include <fstream>      // necessário a partir do Passo 5
 
 // Descomente quando criar os ficheiros:
-// #include "User.h"
-// #include "Msg.h"
+ #include "User.h"
+ #include "Msg.h"
 
 using namespace std;
 

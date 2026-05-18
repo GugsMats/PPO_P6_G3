@@ -8,13 +8,13 @@
 Msg:: Msg(): id(0), info("") {}
 
 //definido
-Msg:: Msg(string i): info(i) {}
+Msg:: Msg(string i): id(nextId++), info(i) {}
 
 //getters
 string Msg:: getInfo() const {return info;}
 
 //impressão
-string Msg::printInf() const {
+void Msg::printInf() const {
   cout << "\n";
   cout << "Informação: " << info << "\n";
 }

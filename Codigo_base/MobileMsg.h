@@ -6,14 +6,12 @@
 #ifndef PPO_P6_G3_MOBILEMSG_H
 #define PPO_P6_G3_MOBILEMSG_H
 
-#ifndef PROJETO_EMAILMSG_H
-#define PROJETO_EMAILMSG_H
-
 using namespace std;
 
 class MobileMsg: public Msg {
 
     private:
+        static unsigned int nextId;
         string srcPhoneNo;
         string dstPhoneNo;
 
@@ -22,7 +20,7 @@ class MobileMsg: public Msg {
         MobileMsg();
 
         //definido
-        MobileMsg(string spn, string dpn);
+        MobileMsg(string spn, string dpn, string i);
             virtual ~MobileMsg() {}
 
         //getters
@@ -37,7 +35,5 @@ class MobileMsg: public Msg {
     //teste porra
 
 };
-
-
 
 #endif //PPO_P6_G3_MOBILEMSG_H
